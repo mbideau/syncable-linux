@@ -15,31 +15,30 @@ Aller-retours en ligne/hors-ligne transparents ou du moins facilités.
 Plusieurs sources peuvent interagir sur le même contenu.  
 Possibilité d'interagir partiellement sur le contenu.  
 Restauration sans heurts en cas de problème.  
-  
+
+### Syncrhonization friendly?
+
 Chaque logiciel devrait être jugé (pour la synchronisation) selon les critères suivants :
 
 1. identification constante des fichiers contenant le travail et la configuration
 2. format de fichier ouvert et si possible standard (afin que d'autres logiciels interagissent)
 3. détection des changements et rechargement du contenu pendant le travail
 4. aide à la résolution de conflits
-  
 
-### Solutions de mise en oeuvre
+### Solutions de mise en oeuvre
 
 - Utiliser des contenus/fichiers imuables (dont le contenu ne change pas). S'il y a un changement, alors cela produit un nouveau fichier. Problème : augmente potentiellement/temporairement l'espace de stockage utilisé.
 - Utilser des répertoires contenant les différentes versions des fichiers, et des liens symboliques pointant vers la dernière version. (Comme la gestion des vhost Apache Httpd sur Debian).
 - Déconnecter l'interface des logiciels, de leur système de stockage, afin de permettre de greffer un intermédiaire (s'occupant de la synchronisation, ou bien de changer le format de stockage).
-  
 
 ### Autre approche
 
 Utiliser un système de fichier sous-jacent :
 
 - qui permette la synchronisation avec de multiples sources/destinations
-- avec une synchronisation éventuellement partielle des contenus.
-  
+- avec une synchronisation éventuellement partielle des contenus. 
 
-### Exemples
+### Exemples
 
 **Logiciel de traitement de texte sur 2 ordinateurs**  
 L'utilisateur possède 2 ordinateurs O1 et O2.  
